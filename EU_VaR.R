@@ -7,8 +7,8 @@ head(DEXUSEU)
 tail(DEXUSEU)
 chartSeries(DEXUSEU)
 
-EU <- DEXUSEU["2010-01-01::"]
-EU <- ifelse(is.na(EU), coredata(mean(EU, na.rm = TRUE)), EU)
+EU <- DEXUSEU["2010-01-01::"] # nolint
+EU <- ifelse(is.na(EU), coredata(mean(EU, na.rm = TRUE)), EU) # nolint
 table(is.na(EU))
 
 
@@ -18,7 +18,7 @@ tail(EU)
 options(repr.plot.width = 4, repr.plot.height = 4)
 hist(EU)
 
-EUR <- diff(log(EU))
+EUR <- diff(log(EU)) # nolint
 head(EUR)
 hist(EUR)
 
