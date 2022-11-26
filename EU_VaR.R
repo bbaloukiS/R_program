@@ -22,11 +22,11 @@ EUR <- diff(log(EU))
 head(EUR)
 hist(EUR)
 
-volatility_EU <- sd(EUR)
+volatility_EU <- sd(EUR) # nolint
 volatility_EU
 
-VaR99_EU <- qnorm(.99)* volatility_EU
-VaR95_EU <- qnorm(.95)* volatility_EU
+VaR99_EU <- qnorm(.99) * volatility_EU # nolint
+VaR95_EU <- qnorm(.95) * volatility_EU # nolint
 
 VaR95_EU
 VaR99_EU
